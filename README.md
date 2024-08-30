@@ -29,3 +29,12 @@ cd app/
 npm run start
 ```
 Both the API and app will rebuild as changes are made to them.
+
+
+
+Note: As I made it in the context of a local docker-compose services networking, you're be able to (with the docker daemon running) execute :
+```
+cd /path/to/cloned/pokedex/
+docker-compose up --build
+```
+then you could access by the browser in http://localhost:4200.
