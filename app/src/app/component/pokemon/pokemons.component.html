@@ -1,0 +1,66 @@
+<div class="container container-table">
+  <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-2">
+    Pokemons
+  </h2>
+
+  <div class="table-wrapper">
+    <div class="container">
+      <div class="row search">
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+          <div class="dataTables_filter">
+            <input-search [externalValue]="externalValue"></input-search>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container scroll">
+      <table class="table isSearch" cellspacing="0">
+        <thead>
+          <tr class="table-heads">
+            <th class="head-item mbr-fonts-style display-7">NAME</th>
+            <th class="head-item mbr-fonts-style display-7">URL</th>
+            <th class="head-item mbr-fonts-style display-7">DETAILS</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let pokemon of pokemons">
+            <td class="body-item mbr-fonts-style display-7">
+              {{ pokemon.name }}
+            </td>
+            <td class="body-item mbr-fonts-style display-7">
+              {{ pokemon.url }}
+            </td>
+            <td class="body-item mbr-fonts-style display-7">
+              <img
+                style="margin-left: 12%"
+                width="30"
+                height="30"
+                src="../assets/details.png"
+                (click)="goToDetails(pokemon.name)"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="loadMore">
+        <button type="button" class="btn btn-light" (click)="loadMore()">
+          LOAD MORE
+        </button>
+        <button type="button" class="btn btn-light" (click)="getPokemons()">
+          RESET
+        </button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row info">
+        <div class="col-md-6">
+          <div class="dataTables_info"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

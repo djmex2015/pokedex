@@ -1,0 +1,53 @@
+<div class="container container-table">
+  <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-2">
+    Details of {{ detail?.name }}
+  </h2>
+  <div class="table-wrapper">
+    <div class="container scroll">
+      <table class="table isSearch" cellspacing="0">
+        <thead></thead>
+
+        <tbody>
+          <tr>
+            <td class="head-item mbr-fonts-style display-7">ID</td>
+            <td class="body-item mbr-fonts-style display-7">
+              {{ detail?.id }}
+            </td>
+          </tr>
+          <tr>
+            <td class="head-item mbr-fonts-style display-7">LOCATION AREAS</td>
+            <td class="body-item mbr-fonts-style display-7">
+              {{ detail?.location_area_name }}
+            </td>
+          </tr>
+          <tr>
+            <td class="head-item mbr-fonts-style display-7">SPECIE</td>
+            <td class="body-item mbr-fonts-style display-7">
+              {{ detail?.specie_name }}
+            </td>
+          </tr>
+          <tr>
+            <td class="head-item mbr-fonts-style display-7">SPRITE</td>
+            <td class="body-item mbr-fonts-style display-7">
+              <img src="{{ detail?.sprite }}" alt="Sprite" />
+            </td>
+          </tr>
+          <tr>
+            <td class="head-item mbr-fonts-style display-7">ABILITIES</td>
+            <td class="body-item mbr-fonts-style display-7">
+              {{ detail?.abilities }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container">
+      <div class="row info">
+        <div class="col-md-6">
+          <div class="dataTables_info"></div>
+        </div>
+        <div class="col-md-6"></div>
+      </div>
+    </div>
+  </div>
+</div>

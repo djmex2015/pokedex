@@ -1,0 +1,19 @@
+version: '3'
+services:
+  pokedex-app:
+    build: ./app
+    ports:
+      - "4200:80"
+    networks:
+      - my-network
+
+  pokedex-api:
+    build: ./api
+    ports:
+      - "3000:3000"
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
